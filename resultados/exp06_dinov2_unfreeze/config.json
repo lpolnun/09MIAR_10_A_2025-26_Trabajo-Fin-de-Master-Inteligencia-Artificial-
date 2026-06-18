@@ -1,0 +1,53 @@
+{
+  "drive_root": "TFM_ID_Cards",
+  "local_data_dir": "/content/data_tfm",
+  "data_seed": 42,
+  "img_size": 224,
+  "batch_train": 64,
+  "batch_val": 128,
+  "num_workers": 2,
+  "syn_train_ratio": 0.3,
+  "num_classes": 4,
+  "class_names": [
+    "bonafide",
+    "print",
+    "screen",
+    "composite"
+  ],
+  "label_map": {
+    "bonafide": 0,
+    "print": 1,
+    "printed": 1,
+    "screen": 2,
+    "composite": 3
+  },
+  "head_hidden": 256,
+  "max_epochs": 150,
+  "patience": 20,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "scheduler_type": "cosine",
+  "model_lr": {
+    "efficientnet_b4": 0.0001,
+    "mobilenetv3_large": 0.0001,
+    "dinov2": 1e-05,
+    "clip": 0.0003,
+    "vit_lora": 0.0003
+  },
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.1,
+  "exp_id": "exp06_dinov2_unfreeze",
+  "note": "DINOv2 con los ultimos 4 bloques del ViT descongelados y lr bajo. Contrasta con exp01 donde el backbone esta frozen.",
+  "models_to_train": [
+    "dinov2"
+  ],
+  "head_dropout": 0.5,
+  "context_pad_frac": 0.08,
+  "dinov2_unfreeze_blocks": 4,
+  "run_seeds": [
+    0,
+    1,
+    2
+  ]
+}
