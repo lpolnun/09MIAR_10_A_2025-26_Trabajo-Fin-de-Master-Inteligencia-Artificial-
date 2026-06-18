@@ -1,0 +1,31 @@
+{
+  "run_seed": 1,
+  "best_val_eer": 0.010129852572782483,
+  "val": {
+    "EER": 0.010129852572782483,
+    "APCER": 0.006600128783000644,
+    "BPCER": 0.021922428330522766,
+    "BPCER@APCER10": 0.00505902192242833,
+    "BPCER@APCER5": 0.008431703204047217,
+    "BPCER@APCER1": 0.01011804384485666,
+    "AVRank": 0.008600337268128162
+  },
+  "test": {
+    "EER": 0.0,
+    "APCER": 0.0,
+    "BPCER": 0.0,
+    "BPCER@APCER10": 0.0,
+    "BPCER@APCER5": 0.0,
+    "BPCER@APCER1": 0.0,
+    "AVRank": 0.0
+  },
+  "test_tta": {
+    "EER": 0.0,
+    "APCER": 0.0,
+    "BPCER": 0.0,
+    "BPCER@APCER10": 0.0,
+    "BPCER@APCER5": 0.0,
+    "BPCER@APCER1": 0.0,
+    "AVRank": 0.0
+  }
+}
