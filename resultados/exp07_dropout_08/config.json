@@ -1,0 +1,55 @@
+{
+  "drive_root": "TFM_ID_Cards",
+  "local_data_dir": "/content/data_tfm",
+  "data_seed": 42,
+  "img_size": 224,
+  "batch_train": 64,
+  "batch_val": 128,
+  "num_workers": 2,
+  "syn_train_ratio": 0.3,
+  "num_classes": 4,
+  "class_names": [
+    "bonafide",
+    "print",
+    "screen",
+    "composite"
+  ],
+  "label_map": {
+    "bonafide": 0,
+    "print": 1,
+    "printed": 1,
+    "screen": 2,
+    "composite": 3
+  },
+  "head_hidden": 256,
+  "max_epochs": 150,
+  "patience": 20,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "scheduler_type": "cosine",
+  "model_lr": {
+    "efficientnet_b4": 0.0001,
+    "mobilenetv3_large": 0.0001,
+    "dinov2": 0.0005,
+    "clip": 0.0003,
+    "vit_lora": 0.0003
+  },
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.1,
+  "exp_id": "exp07_dropout_08",
+  "note": "Dropout 0.8. Completa la comparativa 0.5 / 0.7 / 0.8 sobre todos los modelos.",
+  "models_to_train": [
+    "efficientnet_b4",
+    "mobilenetv3_large",
+    "dinov2",
+    "clip"
+  ],
+  "head_dropout": 0.8,
+  "context_pad_frac": 0.08,
+  "run_seeds": [
+    0,
+    1,
+    2
+  ]
+}
